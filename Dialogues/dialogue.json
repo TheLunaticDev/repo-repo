@@ -1,0 +1,14 @@
+{
+	"1" : {
+	"1": {"Name": "unknown", "Expression": "", "Text": "It seems we have a new visitor here..."},
+	"2": {"Name": "unknown", "Expression": "", "Text": "Ah! Where are my manners. Let me introduce myself first..."},
+	"3": {"Name": "bb", "Expression": "neutral", "Text": "I am BB short for Big Brother. I can see anything and everything that happens in this world!"},
+	"4": {"Name": "bb", "Expression": "neutral", "Text": "I will help you in this journey of yours. What journey you ask? Hehehe, let's not spoil that so soon shall we?"},
+	"5": {"Name": "bb", "Expression": "wonder", "Text": "And now you are asking why am I helping you?"},
+	"6": {"Name": "bb", "Expression": "neutral", "Text": "Hmm... Aren't you a curious one. Let's start the journey first shall we? Your questions would be answered in due time. Good Luck!"}
+	},
+	"Error" : {
+		"1": {"Name": "bb", "Expression": "neutral", "Text": "It seems some sort of error has occured..."},
+		"2": {"Name": "bb", "Expression": "wonder", "Text": "You haven't done something stupid now. Have you?"}
+	}
+}
