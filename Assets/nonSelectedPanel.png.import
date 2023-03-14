@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbepwamjpyomi"
-path="res://.godot/imported/bbwonder.png-cd5ed261c9027a0e251ee3399f9010b3.ctex"
+uid="uid://bhxxafvijfrcj"
+path="res://.godot/imported/nonSelectedPanel.png-179af94881b5a00d3716426a508552d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dialogues/Potraits/bbwonder.png"
-dest_files=["res://.godot/imported/bbwonder.png-cd5ed261c9027a0e251ee3399f9010b3.ctex"]
+source_file="res://Assets/nonSelectedPanel.png"
+dest_files=["res://.godot/imported/nonSelectedPanel.png-179af94881b5a00d3716426a508552d2.ctex"]
 
 [params]
 

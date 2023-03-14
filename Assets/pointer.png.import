@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i8uegfejpnwn"
-path="res://.godot/imported/unknown.png-ed079c56000a786e22b023eb41977a06.ctex"
+uid="uid://c5d8g6fnb4r07"
+path="res://.godot/imported/pointer.png-7a6841f07b392cb843da0da763a12d46.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Dialogues/Potraits/unknown.png"
-dest_files=["res://.godot/imported/unknown.png-ed079c56000a786e22b023eb41977a06.ctex"]
+source_file="res://Assets/pointer.png"
+dest_files=["res://.godot/imported/pointer.png-7a6841f07b392cb843da0da763a12d46.ctex"]
 
 [params]
 

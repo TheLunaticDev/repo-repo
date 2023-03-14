@@ -1,19 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://db7r5a4gu2yyf"]
+[gd_scene load_steps=8 format=3 uid="uid://bqt32gmh5tqyn"]
 
-[ext_resource type="Script" path="res://Dialogues/DialogueBox.gd" id="1_iof1c"]
-[ext_resource type="Texture2D" uid="uid://i8uegfejpnwn" path="res://Dialogues/Potraits/unknown.png" id="1_p8uhm"]
-[ext_resource type="FontFile" uid="uid://do5aa4pnx152m" path="res://Dialogues/ICantThinkOfAGoodNameRegular-AdaL.ttf" id="2_altu8"]
-[ext_resource type="Texture2D" uid="uid://c5d8g6fnb4r07" path="res://Dialogues/pointer.png" id="4_ynj2u"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_r3ttn"]
-font = ExtResource("2_altu8")
-font_size = 20
-font_color = Color(0.545098, 0.913725, 0.992157, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_rcsos"]
-font = ExtResource("2_altu8")
-font_size = 14
-font_color = Color(0.972549, 0.972549, 0.94902, 1)
+[ext_resource type="Script" path="res://Scripts/DialogueBox.gd" id="1_ip1i3"]
+[ext_resource type="Texture2D" uid="uid://i8uegfejpnwn" path="res://Assets/Potraits/unknown.png" id="2_mhrjb"]
+[ext_resource type="FontFile" uid="uid://cu3wrdj64quxp" path="res://Assets/Fonts/bedstead.otf" id="3_jlwge"]
+[ext_resource type="Texture2D" uid="uid://c5d8g6fnb4r07" path="res://Assets/pointer.png" id="4_3n20s"]
 
 [sub_resource type="Animation" id="Animation_78uyh"]
 length = 0.001
@@ -58,12 +48,14 @@ _data = {
 offset_right = 512.0
 offset_bottom = 128.0
 color = Color(0.156863, 0.164706, 0.211765, 1)
-script = ExtResource("1_iof1c")
+script = ExtResource("1_ip1i3")
 readingSpeed = 250.0
+dialogueLocation = "res://Scenes/Dialogues/dialogue.json"
+potraitLocation = "res://Assets/Potraits/"
 
 [node name="Potrait" type="Sprite2D" parent="."]
 scale = Vector2(8, 8)
-texture = ExtResource("1_p8uhm")
+texture = ExtResource("2_mhrjb")
 centered = false
 
 [node name="Name" type="Label" parent="."]
@@ -75,8 +67,9 @@ anchor_right = 1.0
 offset_left = -374.0
 offset_bottom = 30.0
 grow_horizontal = 0
+theme_override_colors/font_color = Color(0.545098, 0.913725, 0.972549, 1)
+theme_override_fonts/font = ExtResource("3_jlwge")
 text = "Name Goes Here"
-label_settings = SubResource("LabelSettings_r3ttn")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -94,13 +87,14 @@ offset_left = -374.0
 offset_top = -98.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_jlwge")
+theme_override_font_sizes/font_size = 16
 text = "Put your dialouges here..."
-label_settings = SubResource("LabelSettings_rcsos")
 autowrap_mode = 3
 
 [node name="Pointer" type="Sprite2D" parent="."]
 position = Vector2(494, 112)
-texture = ExtResource("4_ynj2u")
+texture = ExtResource("4_3n20s")
 centered = false
 hframes = 8
 frame = 1

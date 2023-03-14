@@ -9,6 +9,8 @@ var currentDialogues :Dictionary
 var currentDialogueId :int
 var tween :Tween
 @export var readingSpeed := 200.0 # words per second
+@export_file var dialogueLocation :String
+@export_file var potraitLocation :String
 @onready var Name := $Name
 @onready var Text := $Text
 @onready var Potrait := $Potrait
@@ -29,7 +31,7 @@ func _process(_delta: float) -> void:
 			advance_dialogue()
 
 func load_dialogues() -> void:
-	var file = FileAccess.open("res://Dialogues/dialogue.json", FileAccess.READ)
+	var file = FileAccess.open(dialogueLocation, FileAccess.READ)
 	if file == null:
 		print("Cannot find file.")
 		return
@@ -60,8 +62,8 @@ func start_dialogue() -> void:
 func show_dialogue() -> void:
 	Text.visible_ratio = 0.0
 	Name.text = currentDialogues[str(currentDialogueId)]["Name"]
-	var unknownPotrait = "res://Dialogues/Potraits/unknown.png"
-	var potraitName = "res://Dialogues/Potraits/" + Name.text + currentDialogues[str(currentDialogueId)]["Expression"] + ".png"
+	var unknownPotrait = potraitLocation + "unknown.png"
+	var potraitName = potraitLocation + Name.text + currentDialogues[str(currentDialogueId)]["Expression"] + ".png"
 	Potrait.texture = load(potraitName)
 	if Potrait.texture == null:
 		Potrait.texture = load(unknownPotrait)
