@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://ba2eshngckdht"]
 
-[ext_resource type="Script" path="res://Scripts/item.gd" id="1_12kkl"]
-[ext_resource type="Texture2D" uid="uid://dx7le1g37chs3" path="res://Assets/Items/veryShinyCoin.png" id="2_qq1fv"]
+[ext_resource type="Script" path="res://Scripts/item.gd" id="1_01cup"]
+[ext_resource type="Texture2D" uid="uid://dx7le1g37chs3" path="res://Assets/Items/veryShinyCoin.png" id="2_sppbs"]
 
 [resource]
-script = ExtResource("1_12kkl")
+script = ExtResource("1_01cup")
 id = 1
 name = "Very Shiny Coin"
 description = "It is a very shiny coin. It fact it is so shiny that you may go blind if you look at it for too long. If you think it would fetch a good price in the market don't bother. It is not gold. It is made with a certain kind of cheap fake material."
-texture = ExtResource("2_qq1fv")
-amount = 1
+texture = ExtResource("2_sppbs")
+amount = 0
 maxAmount = 1
 value = 5

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btt44asrmpfw8"
-path="res://.godot/imported/selectedPanel.png-f825a3f02bb251d6e6db2a43233a9722.ctex"
+uid="uid://bjagybb7ysh7p"
+path="res://.godot/imported/hoveringPanel.png-c0e8d7dd475efde6d6238ebeca848063.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/selectedPanel.png"
-dest_files=["res://.godot/imported/selectedPanel.png-f825a3f02bb251d6e6db2a43233a9722.ctex"]
+source_file="res://Assets/hoveringPanel.png"
+dest_files=["res://.godot/imported/hoveringPanel.png-c0e8d7dd475efde6d6238ebeca848063.ctex"]
 
 [params]
 

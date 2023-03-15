@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwwahd7cscq7j"]
+[gd_scene load_steps=7 format=3 uid="uid://b425fb7t84ce5"]
 
 [ext_resource type="FontFile" uid="uid://cu3wrdj64quxp" path="res://Assets/Fonts/bedstead.otf" id="1_5dksj"]
 [ext_resource type="Script" path="res://Scripts/Inventory.gd" id="1_w2o6b"]
 [ext_resource type="Texture2D" uid="uid://bhxxafvijfrcj" path="res://Assets/nonSelectedPanel.png" id="2_30e6f"]
-[ext_resource type="Texture2D" uid="uid://bjagybb7ysh7p" path="res://Assets/selectedPanel.png" id="4_g0cj7"]
+[ext_resource type="Texture2D" uid="uid://btt44asrmpfw8" path="res://Assets/selectedPanel.png" id="4_g0cj7"]
+[ext_resource type="Texture2D" uid="uid://bjagybb7ysh7p" path="res://Assets/hoveringPanel.png" id="4_mjrnn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_42mlp"]
 texture = ExtResource("2_30e6f")
@@ -22,7 +23,10 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.156863, 0.164706, 0.211765, 1)
 script = ExtResource("1_w2o6b")
+selectedPanelTexture = ExtResource("4_g0cj7")
+hoveringPanelTexture = ExtResource("4_mjrnn")
 animationSpeed = 0.125
+itemsDirectory = "res://Resources/Items"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -94,7 +98,7 @@ offset_top = 250.0
 offset_right = 575.0
 offset_bottom = 400.0
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Name" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.313726, 0.980392, 0.482353, 1)
 theme_override_fonts/font = ExtResource("1_5dksj")
@@ -129,12 +133,28 @@ focus_neighbor_right = NodePath("../Panel2")
 focus_neighbor_bottom = NodePath("../Panel7")
 theme_override_styles/panel = SubResource("StyleBoxTexture_42mlp")
 
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Panel2" type="Panel" parent="GridContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_42mlp")
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Panel3" type="Panel" parent="GridContainer"]
 custom_minimum_size = Vector2(16, 16)
@@ -143,12 +163,28 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_42mlp")
 
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Panel4" type="Panel" parent="GridContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_42mlp")
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Panel5" type="Panel" parent="GridContainer"]
 custom_minimum_size = Vector2(16, 16)
@@ -157,12 +193,28 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_42mlp")
 
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Panel6" type="Panel" parent="GridContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_42mlp")
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Panel7" type="Panel" parent="GridContainer"]
 custom_minimum_size = Vector2(16, 16)
@@ -171,12 +223,28 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_42mlp")
 
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Panel8" type="Panel" parent="GridContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_42mlp")
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Panel9" type="Panel" parent="GridContainer"]
 custom_minimum_size = Vector2(16, 16)
@@ -185,12 +253,28 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_42mlp")
 
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Panel10" type="Panel" parent="GridContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_42mlp")
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Panel11" type="Panel" parent="GridContainer"]
 custom_minimum_size = Vector2(16, 16)
@@ -199,6 +283,14 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_42mlp")
 
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel11"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Panel12" type="Panel" parent="GridContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
@@ -206,10 +298,20 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_42mlp")
 
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel12"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Selected" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = -2.0
 offset_top = -2.0
 offset_right = 82.0
 offset_bottom = 93.0
-texture = ExtResource("4_g0cj7")
+texture = ExtResource("4_mjrnn")
+
+[connection signal="pressed" from="HBoxContainer/Discard" to="." method="_on_discard_pressed"]

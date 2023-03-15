@@ -14,6 +14,10 @@ config/name="Repo-repo"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+InventoryData="*res://Singleton/InventoryData.gd"
+
 [display]
 
 window/size/viewport_width=800
